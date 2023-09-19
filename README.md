@@ -9,8 +9,10 @@ The dataset used in this project is a combination of three datasets: figshare, S
 
 # Installation
 To install the necessary pacjages to run the script, use the following commands:
+```shell
 !pip install numpy tensorflow scikit-learn
 !pip install opencv-python-headless
+```
 
 # Usage
 
@@ -34,6 +36,7 @@ The performance of the model was evaluated using a test dataset containing 1311 
 The confusion matrix is a tabulation that describes the performance of the model on the test dataset. It shows the number of true positive, true negative, false positive, and false negative predictions made by the model. Here is the confusion matrix obtained from the evaluation:
 
 ### Confusion Matrix
+<div align="center">
 
 |            | Predicted: Glioma | Predicted: Meningioma | Predicted: No Tumor | Predicted: Pituitary |
 |------------|-------------------|------------------------|---------------------|----------------------|
@@ -41,6 +44,7 @@ The confusion matrix is a tabulation that describes the performance of the model
 | **Meningioma**   | 9                 | 234                   | 56                  | 7                    |
 | **No Tumor**     | 0                 | 4                     | 400                 | 1                    |
 | **Pituitary**    | 5                 | 2                     | 0                   | 293                  |
+</div>
 
 
 
@@ -48,6 +52,7 @@ From the matrix, it can be seen that the model has a high accuracy in classifyin
 
 ## Classification Report
 The classification report provides detailed information on the precision, recall, and F1-score for each class, along with the accuracy of the model. Here is a summary of the classification report:
+<div align="center">
 
 |    Class    | Precision | Recall | F1-Score | Support |
 |:-----------:|:---------:|:------:|:--------:|:-------:|
@@ -58,6 +63,7 @@ The classification report provides detailed information on the precision, recall
 |  **Accuracy**  |          |       |   0.92   |   1311  |
 | **Macro Avg**  |    0.93   |  0.92  |   0.92   |   1311  |
 |**Weighted Avg**|    0.92   |  0.92  |   0.92   |   1311  |
+</div>
 
 
 
