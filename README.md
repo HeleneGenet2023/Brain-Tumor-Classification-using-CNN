@@ -40,10 +40,10 @@ The confusion matrix is a tabulation that describes the performance of the model
 
 |            | Predicted: Glioma | Predicted: Meningioma | Predicted: No Tumor | Predicted: Pituitary |
 |------------|-------------------|------------------------|---------------------|----------------------|
-| **Glioma**       | 282               | 16                    | 0                   | 2                    |
-| **Meningioma**   | 9                 | 234                   | 56                  | 7                    |
-| **No Tumor**     | 0                 | 4                     | 400                 | 1                    |
-| **Pituitary**    | 5                 | 2                     | 0                   | 293                  |
+| **Glioma**       | 282               | 8                     | 0                   | 10                   |
+| **Meningioma**   | 33                | 216                   | 46                  | 11                   |
+| **No Tumor**     | 3                 | 0                     | 400                 | 2                    |
+| **Pituitary**    | 7                 | 2                     | 0                   | 291                  |
 </div>
 
 
@@ -56,13 +56,13 @@ The classification report provides detailed information on the precision, recall
 
 |    Class    | Precision | Recall | F1-Score | Support |
 |:-----------:|:---------:|:------:|:--------:|:-------:|
-|   glioma    |    0.95   |  0.94  |   0.95   |   300   |
-| meningioma  |    0.91   |  0.76  |   0.83   |   306   |
-|   notumor   |    0.88   |  0.99  |   0.93   |   405   |
-|  pituitary  |    0.97   |  0.98  |   0.97   |   300   |
-|  **Accuracy**  |          |       |   0.92   |   1311  |
-| **Macro Avg**  |    0.93   |  0.92  |   0.92   |   1311  |
-|**Weighted Avg**|    0.92   |  0.92  |   0.92   |   1311  |
+|   glioma    |    0.87   |  0.94  |   0.90   |   300   |
+| meningioma  |    0.96   |  0.71  |   0.81   |   306   |
+|   notumor   |    0.90   |  0.99  |   0.94   |   405   |
+|  pituitary  |    0.93   |  0.97  |   0.95   |   300   |
+|  **Accuracy**  |          |       |   0.91   |   1311  |
+| **Macro Avg**  |    0.91   |  0.90  |   0.90   |   1311  |
+|**Weighted Avg**|    0.91   |  0.91  |   0.90   |   1311  |
 </div>
 
 
@@ -70,10 +70,15 @@ The classification report provides detailed information on the precision, recall
 
 ## Analysis
 
-- Precision: The model exhibits high precision across all classes, indicating that it has a high true positive rate with a lower rate of false positives. The precision values are between 0.90 and 0.96 for the different classes.
-- Recall: The recall values indicate that the model has a high true positive rate. The recall values range from 0.76 to 0.99, indicating a strong ability to correctly identify positive cases within each class.
+- Precision: The model exhibits high precision across all classes, indicating that it has a high true positive rate with a lower rate of false positives. The precision values are between 0.87 and 0.96 for the different classes.
+- Recall: The recall values indicate that the model has a high true positive rate. The recall values range from 0.71 to 0.99, indicating a strong ability to correctly identify positive cases within each class.
 - F1-Score: The F1-score is the harmonic mean of precision and recall, providing balance between the two metrics.  The F1-Scores are high for all the classes, indicating a good balance between precision and recall.
-- Accuracy: The model correctly classifies 92% of the images in the test dataset.
+- Accuracy: The model correctly classifies 91% of the images in the test dataset.
+
+### Overfitting Analysis
+During the training phase, the model exhibited signs of overfitting, where it performed exceedingly well on the training data but had a noticeable difference in performance on the validation data. Despite this, the model was able to achieve good performance on the test dataset, as reflected in the high accuracy, precision, and recall values.
+
+Addressing overfitting remains a priority for future iterations of this project. Potential strategies to mitigate this issue might include introducing more regularizations, utilizing a more complex validation strategy, or experimenting with different model architectures.
 
 # Conclusion
 
