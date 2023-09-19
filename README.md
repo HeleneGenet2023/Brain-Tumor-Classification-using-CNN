@@ -49,16 +49,16 @@ From the matrix, it can be seen that the model has a high accuracy in classifyin
 ## Classification Report
 The classification report provides detailed information on the precision, recall, and F1-score for each class, along with the accuracy of the model. Here is a summary of the classification report:
 
-              precision    recall  f1-score   support
+|    Class    | Precision | Recall | F1-Score | Support |
+|:-----------:|:---------:|:------:|:--------:|:-------:|
+|   glioma    |    0.92   |  0.94  |   0.93   |   300   |
+| meningioma  |    0.90   |  0.79  |   0.84   |   306   |
+|   notumor   |    0.92   |  0.99  |   0.95   |   405   |
+|  pituitary  |    0.96   |  0.96  |   0.96   |   300   |
+|  **Accuracy**  |          |       |   0.92   |   1311  |
+| **Macro Avg**  |    0.92   |  0.92  |   0.92   |   1311  |
+|**Weighted Avg**|    0.92   |  0.92  |   0.92   |   1311  |
 
-      glioma       0.92      0.94      0.93       300
-  meningioma       0.90      0.79      0.84       306
-     notumor       0.92      0.99      0.95       405
-   pituitary       0.96      0.96      0.96       300
-
-    accuracy                           0.92      1311
-   macro avg       0.92      0.92      0.92      1311
-weighted avg       0.92      0.92      0.92      1311
 
 
 
