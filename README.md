@@ -37,10 +37,10 @@ The confusion matrix is a tabulation that describes the performance of the model
 
 |            | Predicted: Glioma | Predicted: Meningioma | Predicted: No Tumor | Predicted: Pituitary |
 |------------|-------------------|------------------------|---------------------|----------------------|
-| **Glioma**       | 282               | 17                    | 0                   | 1                    |
-| **Meningioma**   | 16                | 243                   | 35                  | 12                   |
-| **No Tumor**     | 0                 | 6                     | 399                 | 0                    |
-| **Pituitary**    | 9                 | 4                     | 0                   | 287                  |
+| **Glioma**       | 282               | 16                    | 0                   | 2                    |
+| **Meningioma**   | 9                 | 234                   | 56                  | 7                    |
+| **No Tumor**     | 0                 | 4                     | 400                 | 1                    |
+| **Pituitary**    | 5                 | 2                     | 0                   | 293                  |
 
 
 
@@ -51,12 +51,12 @@ The classification report provides detailed information on the precision, recall
 
 |    Class    | Precision | Recall | F1-Score | Support |
 |:-----------:|:---------:|:------:|:--------:|:-------:|
-|   glioma    |    0.92   |  0.94  |   0.93   |   300   |
-| meningioma  |    0.90   |  0.79  |   0.84   |   306   |
-|   notumor   |    0.92   |  0.99  |   0.95   |   405   |
-|  pituitary  |    0.96   |  0.96  |   0.96   |   300   |
+|   glioma    |    0.95   |  0.94  |   0.95   |   300   |
+| meningioma  |    0.91   |  0.76  |   0.83   |   306   |
+|   notumor   |    0.88   |  0.99  |   0.93   |   405   |
+|  pituitary  |    0.97   |  0.98  |   0.97   |   300   |
 |  **Accuracy**  |          |       |   0.92   |   1311  |
-| **Macro Avg**  |    0.92   |  0.92  |   0.92   |   1311  |
+| **Macro Avg**  |    0.93   |  0.92  |   0.92   |   1311  |
 |**Weighted Avg**|    0.92   |  0.92  |   0.92   |   1311  |
 
 
@@ -65,7 +65,7 @@ The classification report provides detailed information on the precision, recall
 ## Analysis
 
 - Precision: The model exhibits high precision across all classes, indicating that it has a high true positive rate with a lower rate of false positives. The precision values are between 0.90 and 0.96 for the different classes.
-- Recall: The recall values indicate that the model has a high true positive rate. The recall values range from 0.79 to 0.99, indicating a strong ability to correctly identify positive cases within each class.
+- Recall: The recall values indicate that the model has a high true positive rate. The recall values range from 0.76 to 0.99, indicating a strong ability to correctly identify positive cases within each class.
 - F1-Score: The F1-score is the harmonic mean of precision and recall, providing balance between the two metrics.  The F1-Scores are high for all the classes, indicating a good balance between precision and recall.
 - Accuracy: The model correctly classifies 92% of the images in the test dataset.
 
